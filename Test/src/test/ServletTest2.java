@@ -1,8 +1,6 @@
 package test;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class ServletTest
+ * Servlet implementation class ServletTest2
  */
-@WebServlet("/ServletTest")
-public class ServletTest extends HttpServlet {
+@WebServlet("/ServletTest2")
+public class ServletTest2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ServletTest() {
+    public ServletTest2() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,19 +27,7 @@ public class ServletTest extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		response.setContentType("text/html;charset=UTF-8");
-		PrintWriter out = response.getWriter();
-		
-		//out.println("Hello World");
-		out.println("<html>");
-		out.println("<body>");
-		out.println("<h1>Hello World</h1>");
-		out.println("<a href='ServletTest2'>Link</a>");
-		out.println("<img src='pictures/octocat.png' width='300' height='300'/>");
-		out.println("</body>");
-		out.println("</html>");
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
